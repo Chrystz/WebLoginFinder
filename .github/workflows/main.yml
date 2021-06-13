@@ -12,5 +12,4 @@ jobs:
     - name : Installing the sca
       run : |
         pip install pyraider
-        cd app
         pyraider check -f requirements.txt
