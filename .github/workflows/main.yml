@@ -1,0 +1,16 @@
+name: sca
+
+on:
+  push:
+
+jobs:
+  checkout-repo:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Checkout 🛎️
+      uses: actions/checkout@v2
+    - name : Installing the sca
+      run : |
+        pip install pyraider
+        cd app
+        pyraider check -f requirements.txt
